@@ -1,15 +1,49 @@
 package br.com.gilvaneide.screenmatch.calculos;
 
+import br.com.gilvaneide.screenmatch.modelos.Episodio;
+import br.com.gilvaneide.screenmatch.modelos.Filme;
+import br.com.gilvaneide.screenmatch.modelos.Serie;
+
 public class FiltroRecomendacao {
     private String recomendacao;
 
-    public void filtra(Classificavel classificavel) {
+    public void filtra(Serie classificavel) {
         if (classificavel.getClassificacao() >= 4) {
-            System.out.println("Está entre os preferidos do momento");
+            System.out.println("Está entre os preferidos do momento: " + classificavel.getNome());
+            System.out.println("\n");
         } else if (classificavel.getClassificacao() >= 2) {
-            System.out.println("Muito bem avaliado no momento!");
+            System.out.println("Muito bem avaliado no momento: " + classificavel.getNome());
+            System.out.println("\n");
         } else {
-            System.out.println("Coloque na sua lista para assistir depois");
+            System.out.println("Coloque na sua lista para assistir depois: " + classificavel.getNome());
+            System.out.println("\n");
+        }
+
+    }
+
+    public void filtra(Filme classificavel) {
+        if (classificavel.getClassificacao() >= 4) {
+            System.out.println("Está entre os preferidos do momento: " + classificavel.getNome());
+            System.out.println("\n");
+        } else if (classificavel.getClassificacao() >= 2) {
+            System.out.println("Muito bem avaliado no momento: " + classificavel.getNome());
+            System.out.println("\n");
+        } else {
+            System.out.println("Coloque na sua lista para assistir depois: " + classificavel.getNome());
+            System.out.println("\n");
+        }
+    }
+
+    public void filtra(Episodio classificavel) {
+        if (classificavel.getClassificacao() >= 4) {
+            System.out.println("Está entre os preferidos do momento: " + classificavel.getNome());
+            System.out.println("\n");
+        } else if (classificavel.getClassificacao() >= 2) {
+            System.out.println("Muito bem avaliado no momento: " + classificavel.getNome());
+            System.out.println("\n");
+        } else {
+            System.out.println("Coloque na sua lista para assistir depois :" + classificavel.getNome());
+            System.out.println("\n");
         }
     }
 }

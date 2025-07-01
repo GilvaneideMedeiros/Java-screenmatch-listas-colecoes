@@ -9,6 +9,8 @@ public class PrincipalComListas {
         Filme filme2 = new Filme("Avatar", 2023);
         Filme filme3 = new Filme("A lista de Schindler", 1993);
         Serie serie1 = new Serie("Lost", 2000);
+
+
     }
 
 }
