@@ -21,8 +21,15 @@ public class PrincipalComListas {
         System.out.println("\nTodos os filmes:\n");
         for (Titulo item : lista) {
             System.out.println(item.getNome());
-            Filme filme = (Filme) item;
-            System.out.println("Classificação " + filme.getClassificacao());
+            if (item instanceof Filme filme && filme.getClassificacao() > 2) {
+                System.out.println("Classificação " + filme.getClassificacao());
+            }
+        }
+
+        if(meuFilme == outroFilme) {
+            System.out.println("\nSão iguais");
+        } else {
+            System.out.println("\nSão diferentes");
         }
 
     }
