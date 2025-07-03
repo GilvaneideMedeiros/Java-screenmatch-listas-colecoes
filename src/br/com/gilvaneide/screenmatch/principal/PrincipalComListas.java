@@ -40,7 +40,6 @@ public class PrincipalComListas {
         buscaPorArtista.add("Paulo");
         buscaPorArtista.add("Jacqueline");
         System.out.println("Lista de artistas: " + buscaPorArtista);
-
         System.out.println("\nApós a ordenação: ");
         Collections.sort(buscaPorArtista);
         System.out.println(buscaPorArtista);
@@ -54,6 +53,7 @@ public class PrincipalComListas {
         lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
         System.out.println("Lista de filmes ordenada por ano de lançamento: ");
         System.out.println(lista);
+
         System.out.println("\n");
         lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento).reversed());
         System.out.println("Lista de filmes ordenada por ano de lançamento em ordem decrescente: ");
