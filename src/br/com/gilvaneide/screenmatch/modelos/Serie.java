@@ -8,9 +8,7 @@ public class Serie extends Titulo {
     private int totalVisualizacoes;
 
     public Serie(String nome, int anoDeLancamento) {
-        super();
-        super.setNome(nome);
-        super.setAnoDeLancamento(anoDeLancamento);
+        super(nome, anoDeLancamento);
     }
 
     public int getTotalVisualizacoes() { return totalVisualizacoes; }
@@ -45,6 +43,10 @@ public class Serie extends Titulo {
 
     public void setMinutosPorEpisodio(int minutosPorEpisodio) {
         this.minutosPorEpisodio = minutosPorEpisodio;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.minutosPorEpisodio = duracaoEmMinutos;
     }
 
     @Override

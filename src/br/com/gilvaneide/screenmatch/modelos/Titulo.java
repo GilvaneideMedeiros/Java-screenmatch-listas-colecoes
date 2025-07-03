@@ -37,6 +37,8 @@ public class Titulo {
         return totalDeAvaliacoes;
     }
 
+    public double getSomaDasAvaliacoes() { return somaDasAvaliacoes; }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -53,9 +55,25 @@ public class Titulo {
         this.duracaoEmMinutos = duracaoEmMinutos;
     }
 
+    public void setTotalDeAvaliacoes(int totalDeAvaliacoes) {
+        this.totalDeAvaliacoes = totalDeAvaliacoes;
+    }
+
+    public void setSomaDasAvaliacoes(double somaDasAvaliacoes) {
+        this.somaDasAvaliacoes = somaDasAvaliacoes;
+    }
+
     public void exibeFichaTecnica(){
         System.out.println("Nome do filme: " + nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
+        System.out.println("Duracao em minutos: " + duracaoEmMinutos);
+        System.out.println("Total de Avaliacoes: " + totalDeAvaliacoes);
+
+        if (incluidoNoPlano) {
+            System.out.println("Incluido no plano: sim");
+        } else {
+            System.out.println("Incluido no plano: nao");
+        }
     }
 
     public void avalia(double nota){
@@ -63,7 +81,16 @@ public class Titulo {
         totalDeAvaliacoes++;
     }
 
-    public double pegaMedia(){
-        return somaDasAvaliacoes / totalDeAvaliacoes;
+    public double pegaMedia() {
+        if (totalDeAvaliacoes == 0) {
+            return 0;
+        } else {
+            return somaDasAvaliacoes / totalDeAvaliacoes;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Titulo: " + nome + " (" + anoDeLancamento + ")";
     }
 }
